@@ -171,10 +171,6 @@ fieldset{
     margin-bottom: 20pt;
 }
 
-textarea{
-    resize: none;
-}
-
 .fila-form{
     margin-bottom: 1rem;
     height: 20px;
