@@ -1,0 +1,223 @@
+* { 
+    margin:0;
+    /* border:#000 1px solid; */
+    box-sizing: border-box;
+}
+
+:root{
+    --fondo:#ede7e3;
+    --color-primary:#ffa62b;
+    --color-secundary:#82c0cc;    
+    --color-frio-medio:#489fb5;
+    --color-frio-dark:#16697a;
+}
+  /* General */
+html, body {
+    font-family: "Prompt", sans-serif;
+    color: var(--fondo); 
+}
+
+header{    
+    /* display: inline-block; */    
+    width: 100%;
+}
+
+nav{
+    background-color: var(--color-primary);
+    word-spacing: 20pt;
+    width: 100%;
+    float:left;
+    margin-bottom: 12px;
+}
+
+nav ul{    
+    line-height: 80px;
+    list-style: none;
+}
+
+nav ul li{    
+    float:left;
+}
+
+nav ul li a{
+    word-spacing: 20pt;
+    padding: 0 20px;
+    text-indent: 28pt;
+    color:#000
+}
+
+nav ul li:hover{
+    background-color: var(--color-frio-dark);
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+.item{
+    word-spacing: 20pt;
+    line-height: 22pt;
+    text-indent: 28pt;
+}
+
+a{
+    text-decoration: none;
+}
+
+#logo{
+    float:right;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 2px var(--color-secundary);
+    margin-right: 20pt;
+    margin-bottom: 12pt;
+}
+
+section{
+    clear: both;
+    margin: 12pt 0;
+    background-color: var(--color-primary);
+    padding: 12pt;
+    width: 100%;    
+}
+
+#home{
+    height: 60vh;
+}
+
+article{
+    float:left;
+    line-height: normal;
+    width: 44%;
+    vertical-align: middle;
+    padding: 20pt;
+    border: var(--color-frio-dark) 2pt solid;
+    height: 100%;
+    background-color: var(--color-secundary);
+    /* font-size: 1.4vw; */
+}
+
+#home img{
+    float:right;
+    width: 50%;
+    height: 100%;
+    border: var(--color-frio-dark) solid 2pt;
+    padding: 4px;
+}
+
+.fila-news{
+    height: 60vh;
+    margin: 10pt 0;
+}
+
+.fila-news img{
+    height: 100%;
+    width: 50%;
+    float: right;
+    border: var(--color-frio-dark) solid 2pt;
+    padding: 4px;
+}
+
+/* Por debajo de 1000px */
+@media screen and (max-width: 1000px){
+    article{
+        padding: 6pt;
+        font-size:15px;
+    }
+}
+
+/* Por debajo de 700px */
+@media screen and (max-width: 700px){
+    article{
+        padding: 6pt;
+        font-size:12px;
+    }
+}
+
+/* Sección Registro*/
+
+#registro{
+    height: 80vh;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-bottom: 0;
+}
+#registro article{
+    border: none;
+    padding-top: 12%;
+    background: none;
+}
+#registro h2{
+    display: flex;
+}
+
+/*Sector formulario*/
+#formulario{
+    float:right;
+    margin-top:4%;
+    width: 50%;
+}
+
+fieldset{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: var(--color-frio-dark) 2px solid;
+}
+
+#formulario h2{
+    text-align: center;
+    padding-left: 15%;
+    margin-bottom: 20pt;
+}
+
+textarea{
+    resize: none;
+}
+
+.fila-form{
+    margin-bottom: 1rem;
+    height: 20px;
+    border: white;
+    width: 100%;
+}
+.fila-form label{
+    width: 20%;
+}
+.entrada{
+    width: 80%;
+    float:right;
+    right: auto;
+    line-height: 1.8;
+    border: none;
+    font-size: 1rem;
+}
+
+#boton{
+    margin-top: 6px;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    border-color:var(--color-frio-medio)   
+}
+
+#boton input{
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    border:var(--color-frio-dark) solid 2px;    
+    cursor: pointer
+}
+
+#boton input:hover{
+    background-color: var(--color-frio-dark);
+    color: white;
+    border:none
+}
+
+/* Por debajo de 700px */
+@media screen and (max-width: 700px){
+    .entrada{
+        width:60%;
+    }
+}
