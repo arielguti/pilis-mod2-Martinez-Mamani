@@ -5,10 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>Feria de las Plantas</title>
 </head>
 <body>
-    
+    <header>
+        <nav >
+            <ul>
+                <li><a href="#home" class="item">Home</a></li>
+                <li><a href="#evento" class="item">Evento</a></li>
+                <li><a href="#registro" class="item">Registro</a></li>                
+            </ul>
+            <img src="https://picsum.photos/id/250/600/400" id="logo" alt="">
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <article>
+                <h2>Título</h2>
+                <h4>Subtítulo</h4>
+            </article>
+            <img src="https://picsum.photos/id/1029/600/400" alt="">
+        </section>
+
+        <section id="evento">
+            <div class="fila-news">
+                <article>
+                    <h2>Subtítulo</h2>
+                    <p>Velit magna sint culpa sint qui consequat qui. Mollit reprehenderit non ea proident nostrud fugiat nisi cillum duis non ipsum. Qui aute eiusmod eu pariatur esse cupidatat Lorem. In laborum esse elit eu non tempor consectetur. Voluptate excepteur exercitation in mollit dolor deserunt enim laborum. Culpa dolore non exercitation aute ex tempor consectetur eu enim deserunt cillum tempor deserunt eu. Ex eiusmod fugiat aliquip id.</p>
+                </article>
+                <img src="https://picsum.photos/id/548/600/400" alt="">
+            </div>
+            <div class="fila-news">
+                <article>
+                    <h2>Subtítulo</h2>
+                    <p>Eiusmod dolore Lorem quis veniam cillum et id nisi consequat. Labore fugiat sint officia ex 
+                        deserunt ad aliquip cillum voluptate. Reprehenderit commodo ut magna occaecat. Culpa duis 
+                        veniam anim fugiat magna mollit excepteur. Irure sint labore laboris officia ipsum adipisicing 
+                        amet officia.
+                    </p>
+                </article>
+                <img src="https://picsum.photos/id/550/600/400" alt="">
+            </div>            
+        </section>
+
+        <section id="registro">
+            <article>
+                <h2>Lorem ipsum</h2>
+            </article>        
+            <div id="formulario">
+                <form>
+                    <fieldset>
+                        <h2>Formulario de Contacto</h2>
+                        <div class="fila-form">
+                            <label class="etiqueta" for="txtNombre">Comercio</label>
+                            <input type="text" id="txtNombre" class="entrada">
+                        </div>
+                        <div class="fila-form">
+                            <label for="txtEmail">Titular</label>
+                            <input type="text" id="txtEmail" class="entrada">
+                        </div>
+                    </fieldset>
+                    
+                    <div id="boton">                        
+                        <input type="submit" value="Enviar">
+                    </div>
+                                
+                </form>
+            </div>            
+        </section>
+    </main>
+
     <script src="/js/main.js"></script>
 </body>
 </html>
