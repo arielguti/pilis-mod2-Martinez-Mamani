@@ -178,7 +178,7 @@ article{
 }
 
 /*Sector formulario*/
-#formulario{
+#box-form{
     float:right;
     margin-top:4%;
     width: 50%;
@@ -190,7 +190,7 @@ fieldset{
     border: var(--color-frio-dark) 2px solid;
 }
 
-#formulario h2{
+#box-form h2{
     text-align: center;
     padding-left: 15%;
     margin-bottom: 20pt;
@@ -231,7 +231,7 @@ fieldset{
 }
 
 #boton input:hover{
-    background-color: var(--color-frio-dark);
+    background-color: var(--color-primary-marron);
     color: white;
     border:none
 }
@@ -311,4 +311,10 @@ footer #section-footer a{
 footer #section-footer a i{
     font-size: 18px;
     color: black;
+}
+
+#section-footer ul li{
+    list-style-type: none;
+    display: block;
+    padding-bottom: 12px;
 }

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feria de las Plantas</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <title>Feria de las Plantas</title>
+    <!-- Librería de alertas -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -63,24 +65,31 @@
 
         <section id="registro">
             <article>
-                <h2>Lorem ipsum</h2>
+                <p>
+                    Sumate a la Gran Muestra Verde, para fortalecer al comercio local y potenciar tu trabajo.
+                </p><br>
+                <p>Luego te contactaremos</p>
             </article>        
-            <div id="formulario">
-                <form>
+            <div id="box-form">
+                <form id="formulario">
                     <fieldset>
                         <h2>Formulario de Contacto</h2>
                         <div class="fila-form">
-                            <label class="etiqueta" for="txtNombre">Comercio</label>
-                            <input type="text" id="txtNombre" class="entrada">
+                            <label class="etiqueta" for="txtComercio">Comercio</label>
+                            <input type="text" id="txtComercio" class="entrada" placeholder="Nombre de Comercio o de Persona">
                         </div>
                         <div class="fila-form">
-                            <label for="txtEmail">Titular</label>
-                            <input type="text" id="txtEmail" class="entrada">
+                            <label for="txtPropietario">Titular</label>
+                            <input type="text" id="txtPropietario" class="entrada" placeholder="Nombre del Propietario">
+                        </div>
+                        <div class="fila-form">
+                            <label for="txtCelular">Celular</label>
+                            <input type="number" id="txtCelular" class="entrada" placeholder="Nro. de Celular">
                         </div>
                     </fieldset>
                     
                     <div id="boton">                        
-                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Enviar" id="enviar">
                     </div>
                                 
                 </form>
@@ -115,11 +124,19 @@
             </div>
         </div>
         <div id="section-footer">
-            <p>
-                &copy; 2022</a>
-            </p>
-            <a >
-                <i class="fa-brands fa-whatsapp"></i>+543884977366</a>
+            <p><a>&copy; 2022</a></p>
+            <ul>
+                <li>
+                    <a href="//wa.me/1543884977366" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> José Martinez
+                    </a>
+                </li><br>
+                <li>
+                    <a href="//wa.me/1543884496476" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> Ariel Mamaní
+                    </a>
+                </li>
+            </ul>            
         </div>
     </footer>
 
