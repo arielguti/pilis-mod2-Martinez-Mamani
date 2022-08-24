@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <title>Feria de las Plantas</title>
 </head>
 <body>
     <header>
         <nav >
             <ul>
-                <li><a href="#home" class="item">Home</a></li>
-                <li><a href="#evento" class="item">Evento</a></li>
-                <li><a href="#registro" class="item">Registro</a></li>                
+                <li><a href="#nosotros" class="item">Nosotros</a></li>
+                <li><a href="#evento" class="item">El evento</a></li>
+                <li><a href="#registro" class="item">Registrate</a></li>                
             </ul>
-            <img src="https://picsum.photos/id/250/600/400" id="logo" alt="">
+            <a href="#home">
+                <img src="assets/planta_logo.webp" id="logo" alt="">
+            </a>
         </nav>
     </header>
 
     <main>
         <section id="home">
             <article>
-                <h2>Título</h2>
-                <h4>Subtítulo</h4>
+                <h2>Nueva edición de la Expo-feria de las plantas</h2>
+                <br>
+                <h4>El 22 de septiembre se desarrollará una nueva edición de la Expo-feria de las plantas. Tendrá lugar en el mismo espacio donde funciona actualmente, en avenida 19 de abril.</h4>
             </article>
-            <img src="https://picsum.photos/id/1029/600/400" alt="">
-        </section>
+            <img src="assets/feria2.png" alt="">
+        </section> 
 
         <section id="evento">
             <div class="fila-news">
@@ -47,6 +51,14 @@
                 </article>
                 <img src="https://picsum.photos/id/550/600/400" alt="">
             </div>            
+        </section>
+
+        <section id="nosotros">
+            <article>
+                <h3>Subitulo</h3>
+                <h4>parrafo</h4>
+            </article>
+            <img src="https://picsum.photos/id/1029/600/400" alt="">
         </section>
 
         <section id="registro">
@@ -75,6 +87,41 @@
             </div>            
         </section>
     </main>
+
+    <footer>
+        <div id="section-clima">
+            <p>Asi esta el clima en el lugar del evento!</p>
+            <br>
+            <div class="contenido-clima">
+                <div class="titulo-clima">
+                    <label id="fecha"></label>
+                    <br>
+                    <label id="ciudad" >La</label>
+                </div>
+
+                <img id="imgClima" src="" width="70" height="70" >
+                <label id="temperatura" >15°C</label>
+                
+                <div class="detalle-clima">
+                    <label id="clima">soleado</label>
+                    <label id="descripcion">con vvientos</label>
+                    <br>
+                    <label id="humedad">4&</label>
+                    <br>
+                    <label id="vicibilidad">23</label>
+                    <br>
+                    <label id="viento">12</label>
+                </div>
+            </div>
+        </div>
+        <div id="section-footer">
+            <p>
+                &copy; 2022</a>
+            </p>
+            <a >
+                <i class="fa-brands fa-whatsapp"></i>+543884977366</a>
+        </div>
+    </footer>
 
     <script src="/js/main.js"></script>
 </body>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap');
+
 * { 
     margin:0;
     /* border:#000 1px solid; */
@@ -5,18 +7,23 @@
 }
 
 :root{
-    --fondo:#ede7e3;
-    --color-primary:#ffa62b;
-    --color-secundary:#82c0cc;    
+    --fondo:#EDF6F9;
+    --color-primary:#006D77;
+    --color-secundary:#83C5BE;
+    --color-primary-marron:#E29578;
+    --color-secundary-marron: #FFDDD2;   
     --color-frio-medio:#489fb5;
     --color-frio-dark:#16697a;
 }
   /* General */
 html, body {
-    font-family: "Prompt", sans-serif;
+    font-family: 'Mali', cursive;
     color: var(--fondo); 
+    scroll-behavior: smooth;
+    font-weight: 300;
 }
 
+/* Seccion Header */
 header{    
     /* display: inline-block; */    
     width: 100%;
@@ -27,7 +34,7 @@ nav{
     word-spacing: 20pt;
     width: 100%;
     float:left;
-    margin-bottom: 12px;
+    margin-bottom: 0;
 }
 
 nav ul{    
@@ -43,19 +50,21 @@ nav ul li a{
     word-spacing: 20pt;
     padding: 0 20px;
     text-indent: 28pt;
-    color:#000
+    color:white;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 nav ul li:hover{
-    background-color: var(--color-frio-dark);
+    background-color: var(--fondo);
 }
 
 nav ul li a:hover{
-    color: white;
+    color: var(--color-primary);
 }
 
 .item{
-    word-spacing: 20pt;
+    word-spacing: 2pt;
     line-height: 22pt;
     text-indent: 28pt;
 }
@@ -72,8 +81,11 @@ a{
     border: solid 2px var(--color-secundary);
     margin-right: 20pt;
     margin-bottom: 12pt;
+    margin-top: 10pt;
 }
 
+
+/* Sección Home */
 section{
     clear: both;
     margin: 12pt 0;
@@ -84,6 +96,14 @@ section{
 
 #home{
     height: 60vh;
+}
+
+#home img{
+    float:right;
+    width: 50%;
+    height: 100%;
+    border: var(--color-frio-dark) solid 2pt;
+    padding: 4px;
 }
 
 article{
@@ -98,14 +118,7 @@ article{
     /* font-size: 1.4vw; */
 }
 
-#home img{
-    float:right;
-    width: 50%;
-    height: 100%;
-    border: var(--color-frio-dark) solid 2pt;
-    padding: 4px;
-}
-
+/* Sección Evento */
 .fila-news{
     height: 60vh;
     margin: 10pt 0;
@@ -115,6 +128,19 @@ article{
     height: 100%;
     width: 50%;
     float: right;
+    border: var(--color-frio-dark) solid 2pt;
+    padding: 4px;
+}
+
+/* Sección Nosotros */
+#nosotros{
+    height: 60vh;
+}
+
+#nosotros img{
+    float:right;
+    width: 50%;
+    height: 100%;
     border: var(--color-frio-dark) solid 2pt;
     padding: 4px;
 }
@@ -136,7 +162,6 @@ article{
 }
 
 /* Sección Registro*/
-
 #registro{
     height: 80vh;
     padding-bottom: 40px;
@@ -216,4 +241,74 @@ fieldset{
     .entrada{
         width:60%;
     }
+}
+
+/*Sección Footer*/
+footer{
+    height: 60vh;
+    background-color: var(--color-primary-marron);
+}
+
+footer #section-clima{
+    height: 270px;
+    margin-bottom: 0;
+    background-color: var(--color-secundary-marron);
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.contenido-clima{
+    margin: auto; 
+    width: 300px;
+    border-radius: 10px;
+    font-size: small;
+    /* box-shadow: 0 0 20px 8px #cfb5ac85; */
+    /* border-style: dashed;
+    border-color: #cfb5ac85; */
+    padding: 1px 1px 1px 10px;
+}
+.titulo-clima{
+    text-align: start;
+}
+.detalle-clima{
+    text-align: start;
+}
+footer #section-clima .contenido-clima #ciudad{
+    font-size: 20px;
+    font-weight: 400;
+}
+footer #section-clima .contenido-clima #temperatura{
+    float: left;
+    font-size: 30px;
+    padding-top: 20px;
+}
+footer #section-clima .contenido-clima #fecha{
+    color: var(--color-primary-marron);
+    font-weight: bold;
+}
+footer #section-clima .contenido-clima #clima, #descripcion{
+    font-weight: 500;
+}
+
+
+footer #section-footer{
+    height: 100px;
+    margin-bottom: 0;
+    padding: 40px 20px 10px 20px;
+}
+footer #section-footer p{
+    font-size: 18px;
+    color: black;
+    float: left;
+}
+footer #section-footer a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    float: right;
+}
+footer #section-footer a i{
+    font-size: 18px;
+    color: black;
 }
