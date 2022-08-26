@@ -75,7 +75,7 @@
                 <p>Luego te contactaremos</p>
             </article>        
             <div id="box-form">
-                <form id="formulario">
+                <form id="formulario" method="post">
                     <fieldset>
                         <h2>Formulario de Contacto</h2>
                         <div class="fila-form">
@@ -84,18 +84,19 @@
                         </div>
                         <div class="fila-form">
                             <label for="txtPropietario">Titular</label>
-                            <input type="text" id="txtPropietario" class="entrada" placeholder="Nombre del Propietario">
+                            <input type="text" id="txtPropietario" class="entrada" placeholder="Nombre del Propietario" 
+                                   minlength="4" required>
                         </div>
                         <div class="fila-form">
                             <label for="txtCelular">Celular</label>
-                            <input type="number" id="txtCelular" class="entrada" placeholder="Nro. de Celular">
+                            <input type="tel" id="txtCelular" class="entrada" placeholder="Cód. de área y Nro de Celular sin espacios"
+                                required>
                         </div>
                     </fieldset>
                     
                     <div id="boton">                        
-                        <input type="submit" value="Enviar" id="enviar">
-                    </div>
-                                
+                        <input type="submit" value="Enviar" id="enviar" >
+                    </div>                                
                 </form>
             </div>            
         </section>

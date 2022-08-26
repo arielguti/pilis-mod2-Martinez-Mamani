@@ -1,30 +1,74 @@
 //Formulario Post
 function onClick (event) {
     event.preventDefault();
-    console.log(event);  
+    console.log(event);
+
     const mensaje = {
       comercio: document.getElementById('txtComercio').value,
       propietario: document.getElementById('txtPropietario').value,
       celular: document.getElementById('txtCelular').value
     }
-    console.log(mensaje);  
+
+    if (txtPropietario.value.length<6 || txtCelular.value.length<10){
+        //Valida el input del nombre del Propietario
+        if(txtPropietario.value.length<6){
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                body: JSON.stringify(mensaje),
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+            })
+            .then((response) => response.json())
+            .then((json) => { 
+                console.log(json);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Nombre No Válido',
+                    text: 'Debe poner un Nombre válido!',
+                });          
+            })
+            txtPropietario.focus();
+        }        
+        //Valida el input del nro. del celular
+        if(txtCelular.value.length<10){
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                body: JSON.stringify(mensaje),
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+            })
+            .then((response) => response.json())
+            .then((json) => { 
+                console.log(json);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Número No Válido',
+                    text: 'Código de área y nro. de celular todo junto sin espacios!',
+                });          
+            })
+            txtCelular.focus();
+        }
+        return 0;
+    }
+    //Nombre de titular y celular validados
+    else{
+        console.log(mensaje);  
   
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      body: JSON.stringify(mensaje),
-      headers: { "Content-type": "application/json; charset=UTF-8" },
-    })
-      .then((response) => response.json())
-      .then((json) => { 
-          console.log(json);
-          Swal.fire(
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            body: JSON.stringify(mensaje),
+            headers: { "Content-type": "application/json; charset=UTF-8" },
+        })
+        .then((response) => response.json())
+        .then((json) => { 
+            console.log(json);
+            Swal.fire(
               'Enviado',
               'Gracias por tu interés en participar',
               'success'
-          );
+            );
           cleanForm();
-      })
-      .catch((err) => console.log(err));  
+        })
+        .catch((err) => console.log(err));
+    }              
 }
 
 function cleanForm() {
