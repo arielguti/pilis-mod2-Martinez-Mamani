@@ -18,14 +18,14 @@
   /* General */
 html, body {
     font-family: 'Mali', cursive;
-    color: var(--fondo); 
+    color: var(--fondo);
     scroll-behavior: smooth;
     font-weight: 300;
+    background-color: var(--color-primary);
 }
 
 /* Seccion Header */
 header{    
-    /* display: inline-block; */    
     width: 100%;
 }
 
@@ -63,22 +63,21 @@ nav ul li a:hover{
     color: var(--color-primary);
 }
 
-.item{
+nav ul .item{
     word-spacing: 2pt;
     line-height: 22pt;
     text-indent: 28pt;
 }
 
-a{
+nav a{
     text-decoration: none;
 }
 
-#logo{
+nav #logo{
     float:right;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: solid 2px var(--color-secundary);
     margin-right: 20pt;
     margin-bottom: 12pt;
     margin-top: 10pt;
@@ -86,16 +85,22 @@ a{
 
 
 /* Sección Home */
-section{
+#home{
+    height: 100vh;
     clear: both;
     margin: 12pt 0;
     background-color: var(--color-primary);
-    padding: 12pt;
-    width: 100%;    
+    padding: 10%;
+    width: 100%;
 }
-
-#home{
-    height: 60vh;
+#home article{
+    float:left;
+    line-height: normal;
+    width: 50%;
+    vertical-align: middle;
+    padding: 20pt;
+    padding-top: 10%;
+    height: 100%;
 }
 
 #home img{
@@ -106,43 +111,91 @@ section{
     padding: 4px;
 }
 
-article{
+/* Sección Evento */
+#evento{
+    clear: both;
+    margin: 2.5%;
+    background-color: rgba(131, 197, 191, 0.5);
+    padding: 12pt;
+    /* width: 100%;  */
+}
+
+#evento #news-1 article{
+    float:right;
+    line-height: normal;
+    width: 44%;
+    vertical-align: middle;
+    padding: 20pt;
+    padding-top: 10%;
+    height: 100%;
+}
+#evento #news-2 article{
     float:left;
     line-height: normal;
     width: 44%;
     vertical-align: middle;
     padding: 20pt;
-    border: var(--color-frio-dark) 2pt solid;
+    padding-top: 10%;
     height: 100%;
-    background-color: var(--color-secundary);
-    /* font-size: 1.4vw; */
 }
 
-/* Sección Evento */
-.fila-news{
+#evento .fila-news{
     height: 60vh;
     margin: 10pt 0;
 }
 
-.fila-news img{
+#evento #news-1 iframe{
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding: 4px;
+}
+#evento #news-2 img{
     height: 100%;
     width: 50%;
     float: right;
-    border: var(--color-frio-dark) solid 2pt;
     padding: 4px;
 }
 
 /* Sección Nosotros */
 #nosotros{
-    height: 60vh;
+    background-image: url("https://picsum.photos/id/1029/600/400");
+    -moz-background-size: 100% 100%; /*Firefox 3.6*/
+    -o-background-size: 100% 100%; /*opera*/
+    -webkit-background-size: 100% 100%; /*Safari*/
+    background-size: 100% 100%; /*estandar css3*/
+}
+#nosotros #acercaDe{
+    height: 100vh;
+    clear: both;
+    width: 100%; 
+    background-color: rgb(0,109,119,0.5);
+}
+#nosotros #acercaDe article{
+    float:left;
+    line-height: normal;
+    width: 50%;
+    vertical-align: middle;
+    padding: 20pt;
+    padding-top: 15%;
+    height: 80%;
 }
 
-#nosotros img{
+#nosotros #acercaDe img{
     float:right;
     width: 50%;
-    height: 100%;
-    border: var(--color-frio-dark) solid 2pt;
+    height: 80%;
     padding: 4px;
+    padding-right: 2%;
+}
+
+#nosotros #acercaDe h3{
+    padding-top: 2%;
+    text-align: center;
+}
+#nosotros #acercaDe p {
+    text-align: center;
+    padding-bottom: 2%;
 }
 
 /* Por debajo de 1000px */
@@ -163,15 +216,25 @@ article{
 
 /* Sección Registro*/
 #registro{
-    height: 80vh;
+    height: 100vh;
     padding-bottom: 40px;
     padding-top: 40px;
     margin-bottom: 0;
+    clear: both;
+    background-color: var(--color-primary);
+    padding: 12pt;
+    width: 100%; 
 }
 #registro article{
     border: none;
     padding-top: 12%;
     background: none;
+    float:left;
+    line-height: normal;
+    width: 44%;
+    vertical-align: middle;
+    padding: 20pt;
+    padding-top: 15%;
 }
 #registro h2{
     display: flex;
@@ -180,7 +243,7 @@ article{
 /*Sector formulario*/
 #box-form{
     float:right;
-    margin-top:4%;
+    margin-top:10%;
     width: 50%;
 }
 
@@ -245,28 +308,38 @@ fieldset{
 
 /*Sección Footer*/
 footer{
-    height: 60vh;
+    height: 70vh;
     background-color: var(--color-primary-marron);
 }
 
 footer #section-clima{
-    height: 270px;
+    height: 340px;
     margin-bottom: 0;
     background-color: var(--color-secundary-marron);
     text-align: center;
     color: black;
     padding: 20px;
+    padding-top: 50px;
+    
 }
 
 .contenido-clima{
-    margin: auto; 
+    /* margin: auto;  */
     width: 300px;
     border-radius: 10px;
     font-size: small;
-    /* box-shadow: 0 0 20px 8px #cfb5ac85; */
-    /* border-style: dashed;
-    border-color: #cfb5ac85; */
     padding: 1px 1px 1px 10px;
+    float: left;
+    margin-left: 25%;
+}
+.contenido-mapa{
+    /* margin: auto;  */
+    width: 300px;
+    border-radius: 10px;
+    font-size: small;
+    padding: 1px 1px 1px 10px;
+    float: left;
+    margin-left: 1%;
 }
 .titulo-clima{
     text-align: start;
@@ -297,24 +370,32 @@ footer #section-footer{
     margin-bottom: 0;
     padding: 40px 20px 10px 20px;
 }
-footer #section-footer p{
-    font-size: 18px;
-    color: black;
+
+footer #section-footer #info{
     float: left;
 }
-footer #section-footer a{
+footer #section-footer #contacto{
+    float: right;
+}
+footer #section-footer #info p{
+    font-size: 18px;
+    color: black;
+    /* float: left; */
+}
+footer #section-footer #contacto a{
     text-decoration: none;
     font-size: 15px;
     color: black;
-    float: right;
 }
-footer #section-footer a i{
+footer #section-footer #contacto a i{
     font-size: 18px;
     color: black;
 }
 
-#section-footer ul li{
+#section-footer #contacto ul li{
     list-style-type: none;
     display: block;
     padding-bottom: 12px;
+    float: left;
+    padding-left: 10px;
 }
