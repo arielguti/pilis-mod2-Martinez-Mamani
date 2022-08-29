@@ -2,19 +2,18 @@
 
 * { 
     margin:0;
-    /* border:#000 1px solid; */
     box-sizing: border-box;
 }
 
+/* Paleta de colores de coloors.co */
 :root{
     --fondo:#EDF6F9;
     --color-primary:#006D77;
     --color-secundary:#83C5BE;
     --color-primary-marron:#E29578;
-    --color-secundary-marron: #FFDDD2;   
-    --color-frio-medio:#489fb5;
-    --color-frio-dark:#16697a;
+    --color-secundary-marron: #FFDDD2;
 }
+
   /* General */
 html, body {
     font-family: 'Mali', cursive;
@@ -30,7 +29,7 @@ header{
 }
 
 nav{
-    background-color: var(--color-primary);
+    background-color: var(--color-secundary);
     word-spacing: 20pt;
     width: 100%;
     float:left;
@@ -38,12 +37,13 @@ nav{
 }
 
 nav ul{    
-    line-height: 80px;
+    line-height: 110px;
     list-style: none;
 }
 
 nav ul li{    
     float:left;
+    height: 100%;
 }
 
 nav ul li a{
@@ -55,6 +55,9 @@ nav ul li a{
     padding-bottom: 30px;
 }
 
+nav ul:hover{
+    background-color: var(--fondo);
+}
 nav ul li:hover{
     background-color: var(--fondo);
 }
@@ -159,7 +162,7 @@ nav #logo{
 
 /* Sección Nosotros */
 #nosotros{
-    background-image: url("https://picsum.photos/id/1029/600/400");
+    background-image: url('../assets/plantasFondo.jpg');
     -moz-background-size: 100% 100%; /*Firefox 3.6*/
     -o-background-size: 100% 100%; /*opera*/
     -webkit-background-size: 100% 100%; /*Safari*/
@@ -225,6 +228,7 @@ nav #logo{
     padding: 12pt;
     width: 100%; 
 }
+
 #registro article{
     border: none;
     padding-top: 12%;
@@ -236,8 +240,27 @@ nav #logo{
     padding: 20pt;
     padding-top: 15%;
 }
+
 #registro h2{
     display: flex;
+}
+#contacto{
+    margin-top: 20px;
+}
+#contacto a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+#contacto a i{
+    font-size: 18px;
+    color: white;
+}
+
+#contacto ul li{
+    list-style-type: none;
+    display: block;
+    padding-bottom: 12px;
 }
 
 /*Sector formulario*/
@@ -260,14 +283,16 @@ fieldset{
 }
 
 .fila-form{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     height: 20px;
     border: white;
     width: 100%;
 }
+
 .fila-form label{
     width: 20%;
 }
+
 .entrada{
     width: 80%;
     float:right;
@@ -280,7 +305,7 @@ fieldset{
 #boton{
     margin-top: 6px;
     width: 100%;
-    height: 36px;
+    height: 60px;
     padding: 0;
     border-color:var(--color-frio-medio)   
 }
@@ -290,7 +315,9 @@ fieldset{
     width: 100%;
     height: 100%;
     border:var(--color-frio-dark) solid 2px;    
-    cursor: pointer
+    cursor: pointer;
+    font-family: 'Mali';
+    font-size: large;
 }
 
 #boton input:hover{
@@ -308,7 +335,7 @@ fieldset{
 
 /*Sección Footer*/
 footer{
-    height: 70vh;
+    height: 100vh;
     background-color: var(--color-primary-marron);
 }
 
@@ -319,25 +346,24 @@ footer #section-clima{
     text-align: center;
     color: black;
     padding: 20px;
-    padding-top: 50px;
-    
+    padding-top: 50px;    
 }
 
 .contenido-clima{
     /* margin: auto;  */
-    width: 300px;
+    width: 40%;
     border-radius: 10px;
     font-size: small;
     padding: 1px 1px 1px 10px;
     float: left;
-    margin-left: 25%;
+    margin-left: 10%;
 }
 .contenido-mapa{
     /* margin: auto;  */
-    width: 300px;
+    width: 30%;
     border-radius: 10px;
     font-size: small;
-    padding: 1px 1px 1px 10px;
+    padding: 1px;
     float: left;
     margin-left: 1%;
 }
@@ -366,36 +392,15 @@ footer #section-clima .contenido-clima #clima, #descripcion{
 
 
 footer #section-footer{
-    height: 100px;
+    height: 120px;
     margin-bottom: 0;
-    padding: 40px 20px 10px 20px;
+    padding: 20px;
+    clear: both;
+    text-align: center;
 }
 
-footer #section-footer #info{
-    float: left;
-}
-footer #section-footer #contacto{
-    float: right;
-}
 footer #section-footer #info p{
     font-size: 18px;
     color: black;
     /* float: left; */
-}
-footer #section-footer #contacto a{
-    text-decoration: none;
-    font-size: 15px;
-    color: black;
-}
-footer #section-footer #contacto a i{
-    font-size: 18px;
-    color: black;
-}
-
-#section-footer #contacto ul li{
-    list-style-type: none;
-    display: block;
-    padding-bottom: 12px;
-    float: left;
-    padding-left: 10px;
 }
